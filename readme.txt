@@ -1,8 +1,7 @@
 Nighthawk PHP Site Tool
 
 version 1.0
-
-by Xtfer	chris@xtfer.com
+by Xtfer	
 
 Nighthawk is a lightweight tool for building small PHP sites using flat file
 structures. It should work on any server which can run PHP and has a very low 
