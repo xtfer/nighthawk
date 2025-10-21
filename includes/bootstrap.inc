@@ -13,17 +13,14 @@ function check_plain($text) {
 function sanitize($input) {
 	if (is_array($input)) {
 		$output = array();
-	  foreach($input as $var=>$val) {
-
-			$output[$var] = check_plain($val);
-	   }
+		foreach($input as $var=>$val) {
+			$output[$var] = sanitize($val);
+		}
 	}
 	else {
-		if (get_magic_quotes_gpc()) {
-			$input = stripslashes($input);
-		}
-		$input  = cleanInput($input);
-		$output = mysql_real_escape_string($input);
+		// Simple sanitization using htmlspecialchars
+		// Magic quotes removed in PHP 5.4, mysql_* functions removed in PHP 7.0
+		$output = check_plain($input);
 	}
 	return $output;
 }
