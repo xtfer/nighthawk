@@ -1,0 +1,33 @@
+{
+    "name": "xtfer/nighthawk",
+    "description": "A lightweight tool for building small PHP sites using flat file structures",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Christopher Skene",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "cms",
+        "flat-file",
+        "lightweight",
+        "php",
+        "static-site"
+    ],
+    "require": {
+        "php": ">=8.3"
+    },
+    "autoload": {
+        "files": [
+            "includes/bootstrap.inc",
+            "includes/config.inc",
+            "includes/util.inc"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
